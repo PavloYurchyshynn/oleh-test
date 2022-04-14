@@ -1,0 +1,42 @@
+.dots {
+    margin: auto 1rem;
+}
+
+.dots span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.silverDot {
+    background-color: silver;
+}
+
+.redDot {
+    background-color: red;
+}
+
+.greenDot {
+    background-color: green;
+}
+
+.correctInput {
+    border: 2px solid green;
+    outline: none;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0 0 0 10px;
+}
+
+.itemInput {
+    outline: none;
+    width: 100px;
+    border-radius: 5px;
+    margin: 0 0 0 10px;
+}
+
+.emoji {
+    margin: 0 20px;
+}
+

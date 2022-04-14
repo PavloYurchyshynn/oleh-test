@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Container, List } from '@mui/material';
 import './App.css';
+import Header from './components/Header/Header';
+import TaskItem from './components/TaskItem/TaskItem';
+import { task } from './data/task';
 
 function App() {
+
+  let tasksElements = task.map(el => <TaskItem key={el.id} {...el} />)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Container sx={{ mt: '2rem' }}>
+        <h1>Proszę napisać poprawną formę przymiotnika😊.</h1>
+        <h2>Przykład: Książka jest lepsza niż film.</h2>
+        <List>
+          {tasksElements}
+        </List>
+      </Container>
+    </>
   );
 }
 
